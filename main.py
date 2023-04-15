@@ -3,6 +3,10 @@ import pandas
 
 st.set_page_config(layout='wide')
 
+with open('styles.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+
 df = pandas.read_csv('demonslayers.csv', sep=',')
 
 
@@ -27,19 +31,19 @@ with col3:
 
 
 with col4:
-    st.write('<p> Below is a list of characters that appear in the Demon Slayer Anime </p>',
+    st.write('<p2> Below is a list of characters that appear in the Demon Slayer Anime </p2>',
              unsafe_allow_html=True)
 
 with col5:
     for index, row in df[:6].iterrows():
         st.header(row['character name'])
-        st.write(row['description'])
+        st.write('<p3>' + row['description'] + '</p3>', unsafe_allow_html=True)
         st.image('images/' + row['image'], width=400)
         st.write('Episode Appearances:' + " " + row['episode appearance'])
 
 with col6:
     for index, row in df[6:].iterrows():
         st.header(row['character name'])
-        st.write(row['description'])
+        st.write('<p3>' + row['description'] + '</p3>', unsafe_allow_html=True)
         st.image('images/' + row['image'], width=400)
         st.write('Episode Appearances:' + " " + row['episode appearance'])

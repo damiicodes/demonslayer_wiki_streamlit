@@ -1,0 +1,36 @@
+h1 {
+    color: black;
+    font: Dekko;
+    font-size: 40px;
+    text-align: center;
+    padding: 50px;
+
+
+
+
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    color: black;
+    font-size: 18px;
+    text-align: center;
+
+
+}
+
+p2 {
+    color: #495057;
+    font: monaco;
+    font-size: 20px;
+    text-align: center;
+
+
+}
+
+p3{
+    background-color: #ced4da;
+}
